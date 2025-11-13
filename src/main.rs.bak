@@ -1,0 +1,9 @@
+use spatial_hash::{error::*, vec2::*, SpatialHash};
+fn main() {
+    let cell_size = Vec2::new(10.0, 10.0);
+    let start = Vec2::new(0.0, 0.0);
+    let end = Vec2::new(99.0, 99.0);
+    let res = SpatialHash::new(cell_size, start, end);
+    let grid = res.unwrap();
+    println!("{grid:#?}");
+}
